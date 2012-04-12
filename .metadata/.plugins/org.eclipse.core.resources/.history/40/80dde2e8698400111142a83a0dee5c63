@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <p>
+        Thank you for using LED Caller ID. 
+        </p>
+        
+        <p>
+        LED Caller ID displays caller id information from the <a href="http://opencnam.com/">opencnam</a> database when you receive a phone call.
+        To use it, all you need to do is ensure that the button below reads "Caller ID is ON." If you wish to
+        disable it at any time, just press the button to toggle it off. 
+        </p>
+
+        <p>
+        As with any phone, sometimes caller id information is not available. When this happens, a message is displayed
+        to inform you that no information was found. Due to the nature of the telephone system and opencnam database, 
+        you will find that this application has more information about land lines than mobiles.
+        </p>
+
+        <p>
+        If you like this app, please support further development by rating it on Google Play.
+        </p>
+
+        <p>
+        To report an issue or request a feature, please email <a href="mailto:support@tomdignan.com?Subject=LEDCallerID">support@tomdignan.com</a> with your problem and I will respond as soon as possible.
+        </p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+package com.tomdignan.android.opencnam.library;
+
+import org.apache.http.client.HttpClient;
+
+import android.content.Context;
+import android.util.Log;
+
+import com.tomdignan.android.opencnam.library.ssl.SSLHelper;
+
+/**
+ * An OpenCNAMRequest that includes support for devices that don't have a
+ * robust enough selection of SSL certificates to support SSL on api.opencnam.com.
+ * 
+ * @author Tom Dignan
+ *
+ */
+public class SSLCertifiedOpenCNAMRequest extends OpenCNAMRequest {
+	private static final String TAG = "SSLCertifiedOpenCNAMRequest";
+	
+	@Override
+	protected HttpClient getHttpClient() {
+		try {
+			return SSLHelper.makeSSLFriendlyHttpClient(getContext());
+		} catch (Exception e) {
+			Log.e(TAG, "Failed to make SSL friendly HttpClient. Falling back on default. Maybe it will work.");
+			e.printStackTrace();
+		}
+	}
+}

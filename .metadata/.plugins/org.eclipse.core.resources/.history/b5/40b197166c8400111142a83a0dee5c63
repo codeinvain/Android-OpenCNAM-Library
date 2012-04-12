@@ -1,0 +1,53 @@
+package com.tomdignan.android.LEDCallerID;
+
+import android.content.ComponentName;
+import android.content.Intent;
+import android.util.Log;
+
+public class IncomingCallListener extends BaseIncomingCallListener {
+	private static final String TAG = "WCIncomingCallListener";
+	@Override
+	void onCallReceived(String phoneNumber) {
+		Log.d(TAG, "onCallReceived(" + phoneNumber + ")");
+		
+		if (Preferences.getBoolean(getContext(), Preferences.IS_CALLER_ID_ACTIVE)) {
+			showCallerIdDisplay(phoneNumber);
+		} else {
+			Log.w(TAG, "Call received, but caller id is not active.");
+		}
+	}
+	
+	// Note on onCallAnswered && onCallHangup:
+	//
+	// Always attempt to dismissCallerIdDisplay here. It is harmless even if 
+	// caller id is inactive. Doing this conditionally would give the user the
+	// ability to disable his caller id in mid call and get the message stuck
+	// on the screen.
+	@Override
+	void onCallAnswered () {
+
+		dismissCallerIdDisplay();
+	}
+
+	@Override
+	void onCallHangup() {
+		// Always attempt to dismiss. It is harmless even if caller id is inactive.
+		dismissCallerIdDisplay();
+	}
+	
+	private void showCallerIdDisplay(String phoneNumber) {
+		Intent intent = new Intent(getContext(), CallerIdDisplayService.class);
+		intent.setAction(CallerIdDisplayService.ACTION_SHOW_CALLER_ID);
+		intent.putExtra(CallerIdDisplayService.EXTRA_PHONE_NUMBER, phoneNumber);
+		ComponentName name = getContext().startService(intent);
+		Log.d(TAG, "showCallerIdDisplay, startService returned " + name);
+	}
+	
+	private void dismissCallerIdDisplay() {
+		Intent intent = new Intent(getContext(), CallerIdDisplayService.class);
+		intent.setAction(CallerIdDisplayService.ACTION_DISMISS_CALLER_ID);
+		ComponentName name = getContext().startService(intent);
+		Log.d(TAG, "showCallerIdDisplay, startService returned " + name);
+	}
+	
+}

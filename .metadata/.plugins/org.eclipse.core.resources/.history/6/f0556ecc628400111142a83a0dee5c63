@@ -1,0 +1,45 @@
+package com.tomdignan.android.LEDCallerID;
+
+import android.content.ComponentName;
+import android.content.Intent;
+import android.util.Log;
+
+public class IncomingCallListener extends BaseIncomingCallListener {
+	private static final String TAG = "WCIncomingCallListener";
+
+	public IncomingCallListener() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	void onCallReceived(String phoneNumber) {
+		Log.d(TAG, "onCallReceived(" + phoneNumber + ")");
+		showCallerIdDisplay(phoneNumber);
+	}
+
+	@Override
+	void onCallAnswered () {
+		dismissCallerIdDisplay();
+	}
+
+	@Override
+	void onCallHangup() {
+		dismissCallerIdDisplay();
+	}
+	
+	private void showCallerIdDisplay(String phoneNumber) {
+		Intent intent = new Intent(getContext(), CallerIdDisplayService.class);
+		intent.setAction(CallerIdDisplayService.ACTION_SHOW_CALLER_ID);
+		intent.putExtra(CallerIdDisplayService.EXTRA_PHONE_NUMBER, phoneNumber);
+		ComponentName name = getContext().startService(intent);
+		Log.d(TAG, "showCallerIdDisplay, startService returned " + name);
+	}
+	
+	private void dismissCallerIdDisplay() {
+		Intent intent = new Intent(getContext(), CallerIdDisplayService.class);
+		intent.setAction(CallerIdDisplayService.ACTION_DISMISS_CALLER_ID);
+		ComponentName name = getContext().startService(intent);
+		Log.d(TAG, "showCallerIdDisplay, startService returned " + name);
+	}
+	
+}

@@ -1,0 +1,82 @@
+package com.tomdignan.android.LEDCallerID;
+
+
+import android.app.Activity;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.view.View;
+import android.webkit.WebView;
+import android.widget.Button;
+
+/**
+ * Main Activity class for Who's Calling.
+ *
+ * @author Tom Dignan
+ */
+public class MainActivity extends Activity implements View.OnClickListener {
+	
+	private static class ViewHolder {
+		Button bToggleCallerId;
+		WebView wvInstructions;
+	}
+	
+	private ViewHolder mHolder = new ViewHolder();
+	private SharedPreferences mPreferences;
+	
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+        initState();
+        findViews();
+        showInstructionsInWebview();
+        initCallerIdToggleButton();
+    }
+
+    /** Initialize any state this object needs unrelated to views */
+    private void initState() {
+        mPreferences = Preferences.getSharedPreferences(this);
+    }
+    
+    /** Must be called immediately after setContentView() */
+    private void findViews() {
+    	mHolder.bToggleCallerId = (Button) findViewById(R.id.bToggleCallerId);
+    	mHolder.wvInstructions = (WebView) findViewById(R.id.wvInfo);
+    }
+    
+	@Override
+	public void onClick(View view) {
+		int id = view.getId();
+		switch (id) {
+		case R.id.bToggleCallerId:
+			toggleCallerId();
+			break;
+		}
+	}
+	
+	/**
+	 * Not sure this one needs explanation.
+	 */
+	private void showInstructionsInWebview() {
+		mHolder.wvInstructions.loadUrl("file://android_asset/html/instructions.html");
+	}
+	
+	/**
+	 * Set the correct initial state for the caller id toggle button.
+	 */
+	private void initCallerIdToggleButton() {
+		boolean isCallerIdActive = Preferences.getBoolean(mPreferences, Preferences.IS_CALLER_ID_ACTIVE);
+		mHolder.bToggleCallerId.setText(isCallerIdActive ? getString(R.string.caller_id_is_on) : 
+			getString(R.string.caller_id_is_off));
+	}
+	
+	/**
+	 * Toggle the caller id on/off preference and update the state of the button.
+	 * @param callerIdButton
+	 */
+	private void toggleCallerId() {
+		boolean isCallerIdActive = Preferences.getBoolean(mPreferences, Preferences.IS_CALLER_ID_ACTIVE);
+		isCallerActive = (isCallerIdActive ? false : true);
+	}
+}

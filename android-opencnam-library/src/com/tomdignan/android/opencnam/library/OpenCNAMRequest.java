@@ -17,16 +17,18 @@ package com.tomdignan.android.opencnam.library;
 
 import java.io.IOException;
 import java.net.URI;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.UnrecoverableKeyException;
+import java.security.cert.CertificateException;
 
 import org.apache.http.HttpResponse;
 import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.BasicResponseHandler;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpParams;
-
+import android.content.Context;
 import android.util.Log;
 
 /**
@@ -34,7 +36,7 @@ import android.util.Log;
  * 
  * @author Tom Dignan
  */
-public class OpenCNAMRequest implements Request {
+abstract public class OpenCNAMRequest implements Request {
 	//=========================================================================
 	// Static Members
 	//=========================================================================
@@ -66,7 +68,7 @@ public class OpenCNAMRequest implements Request {
 	
 	//=========================================================================
 	// Instance Members
-	//==============================================================javadoc===========
+	//=========================================================================
 	
 	/** Phone number to look up CNAM */
 	private String mPhoneNumber = null;
@@ -81,7 +83,7 @@ public class OpenCNAMRequest implements Request {
 	private String mAPIKey = null;
 	
 	/** Reusable HttpClient instance */
-	private HttpClient mHttpClient = new DefaultHttpClient();
+	private HttpClient mHttpClient;
 	
 	/** Reusable HttpPost instance */
 	private HttpGet mHttpGet = new HttpGet();
@@ -89,45 +91,54 @@ public class OpenCNAMRequest implements Request {
 	/** Reusable ResponseHandler instance */
 	private BasicResponseHandler mResponseHandler = new BasicResponseHandler();
 	
+	/** The context, if set */
+	private Context mContext;
+	
 	//=========================================================================
 	// Constructors
 	//=========================================================================
 	
-	/** Default constructor */
+	/** Default constructor 
+	 * @throws IOException 
+	 * @throws CertificateException 
+	 * @throws NoSuchAlgorithmException 
+	 * @throws KeyStoreException 
+	 * @throws UnrecoverableKeyException 
+	 * @throws KeyManagementException */
 	public OpenCNAMRequest() {
-		// NOOP
+		// Otherwise we will get a ClientProtocolException, Not trusted server certificate.
+		mHttpClient = getHttpClient();
 	}
 	
-	/** 
-	 * Convenience constructor to pre-set phone number.
-	 * 
-	 * @param phoneNumber
+	/**
+	 * This consturctor is needed for SSLCertifiedOpenCNAMRequest
+	 * @param context
 	 */
-	public OpenCNAMRequest(String phoneNumber) {
-		mPhoneNumber = phoneNumber;
+	public OpenCNAMRequest(Context context) {
+		mContext = context;
+		mHttpClient = getHttpClient();
 	}
 	
-	/** 
-	 * Initialize all fields on creation with this constructor if desired.
-	 * 
-	 * @param mPhoneNumber
-	 * @param mSerializationFormat
-	 * @param mUsername
-	 * @param mAPIKey
+	/**
+	 *  Implement this to construct the HttpClient instance that OpenCNAMRequest
+	 *  will use. This is meant to be a clean way of being able to fall back on
+	 *  the version that does not use special a SSLSocketFactory if it fails for
+	 *  some reason. Some android devices do not recognize the cert that is on
+	 *  api.opencnam.com, so I made a custom keystore just for the library
 	 */
-	public OpenCNAMRequest(String phoneNumber, String serializationFormat,
-			String username, String apiKey) {
-		mPhoneNumber = phoneNumber;
-		mSerializationFormat = serializationFormat;
-		mUsername = username;
-		mAPIKey = apiKey;
-	}
-
-
+	abstract protected HttpClient getHttpClient();
+	 
 	//=========================================================================
 	// Accessors
 	//=========================================================================
 	
+	/**
+	 * Returns the context if set, else null.
+	 */
+	protected Context getContext() {
+		return mContext;
+	}
+
 	/**
 	 * Set the optional username parameter 
 	 */
@@ -183,7 +194,6 @@ public class OpenCNAMRequest implements Request {
 	 */
 	@Override
 	public String execute() throws ClientProtocolException, IOException {
-		StringBuilder uriBuilder = new StringBuilder();
 		mHttpGet.setURI(makeRequestURI());
 		Log.d(TAG, "requestLine="+mHttpGet.getRequestLine());
 		Log.d(TAG, "params="+mHttpGet.getParams().toString());
@@ -197,7 +207,7 @@ public class OpenCNAMRequest implements Request {
 	//=========================================================================
 	// Private Helpers
 	//=========================================================================
-	
+
 	/** 
 	 * Build out an appropriate URI for this request.
 	 * 

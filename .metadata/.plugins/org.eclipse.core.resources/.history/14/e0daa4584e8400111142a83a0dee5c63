@@ -1,0 +1,137 @@
+package com.tomdignan.android.whoscalling;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+import com.tomdignan.android.opencnam.library.OpenCNAMRequest;
+import com.tomdignan.android.opencnam.library.SSLCertifiedOpenCNAMRequest;
+
+import android.app.Service;
+import android.content.Intent;
+import android.os.AsyncTask;
+import android.os.IBinder;
+import android.telephony.PhoneNumberUtils;
+import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+
+public class CallerIdDisplayService extends Service {
+	private static final String TAG = "WCCallerIdDisplayService";
+	
+	public static final String ACTION_SHOW_CALLER_ID = "com.tomdignan.android.whoscalling.ACTION_SHOW_CALLER_ID";
+	public static final String ACTION_DISMISS_CALLER_ID = "com.tomdignan.android.whoscalling.ACTION_DISMISS_CALLER_ID";
+	public static final String EXTRA_PHONE_NUMBER = "PHONE_NUMBER";
+	
+	private TextView mHUDView;
+	private LookupCNAMTask mLookupCNAMTask; 
+	
+	private class LookupCNAMTask extends AsyncTask<String, Void, JSONObject> {
+		OpenCNAMRequest mCNAMRequest; 
+		private Exception mRequestException = null;
+		
+		public LookupCNAMTask() {
+			mCNAMRequest = new SSLCertifiedOpenCNAMRequest(CallerIdDisplayService.this);
+			mCNAMRequest.setUsername("tdignan");
+			mCNAMRequest.setSerializationFormat(OpenCNAMRequest.FORMAT_JSON);
+			mCNAMRequest.setAPIKey("fd59a960260fbe03bfacc359bfb5dd25157b7b41");
+		}
+		
+		@Override
+		protected JSONObject doInBackground(String... params) {
+			try {
+				mCNAMRequest.setPhoneNumber(params[0]);
+				return new JSONObject(mCNAMRequest.execute());
+			} catch (Exception e) {
+				mRequestException = e;
+				return null;
+			}
+		}
+	
+		@Override
+		protected void onPostExecute(JSONObject result) {
+			if (result == null) {
+				handleException(mRequestException);
+			} else {
+				handleResult(result);
+			}
+		
+			super.onPostExecute(result);
+		}
+		
+		private void handleException(Exception e) {
+			e.printStackTrace();
+			mHUDView.setText("Caller ID is Temporarily Unavailable");
+		}
+	
+		private void handleResult(JSONObject result) {
+			try {
+				String phoneNumber = PhoneNumberUtils.formatNumber(result.getString("number").trim());
+				String cnam = result.getString("cnam").trim();
+				mHUDView.setText("Call From " + cnam + " (" + phoneNumber + " )");
+			} catch (JSONException e) {
+				handleException(e);
+			}
+		}
+	}
+	
+	@Override
+	public void onCreate() {
+		View hudLayout = HUDHelper.makeHUDView(this);
+		mHUDView = (TextView) hudLayout.findViewById(R.id.tvHUDText);
+		HUDHelper.setHudView(this, hudLayout);
+		try {
+			mLookupCNAMTask = new LookupCNAMTask();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		super.onCreate();
+	}
+	
+	@Override
+	public int onStartCommand(Intent intent, int flags, int startId) {
+		if (intent != null) {
+			String action = intent.getAction();
+			String phoneNumber = intent.getStringExtra(EXTRA_PHONE_NUMBER);
+	
+			if (action.equals(ACTION_SHOW_CALLER_ID)) {
+				handleShowCallerId(phoneNumber);
+			} else if (action.equals(ACTION_DISMISS_CALLER_ID)){ 
+				handleDismissCallerId();
+			} else {
+				
+			}
+		} else {
+			Log.w(TAG, "NULL intent received. Is it restarting?");
+		}
+		
+		return START_STICKY;
+	}
+
+	private void handleShowCallerId(String phoneNumber) {
+		mHUDView.setText("Finding Caller ID for " + PhoneNumberUtils.formatNumber(phoneNumber));
+		
+		if (mLookupCNAMTask == null) {
+			mLookupCNAMTask = new LookupCNAMTask();
+			mLookupCNAMTask.execute(phoneNumber);
+		} else {
+			mLookupCNAMTask.cancel(true);
+			mLookupCNAMTask = null;
+			mLookupCNAMTask = new LookupCNAMTask();
+			mLookupCNAMTask.execute(phoneNumber);
+		}
+	}
+
+	private void handleDismissCallerId() {
+		if (mLookupCNAMTask != null) {
+			mLookupCNAMTask.cancel(true);
+			mLookupCNAMTask = null;
+		}
+		mHUDView.setText("");
+	}
+ 
+	@Override
+	public IBinder onBind(Intent intent) {
+		// NOOP
+		return null;
+	}
+}

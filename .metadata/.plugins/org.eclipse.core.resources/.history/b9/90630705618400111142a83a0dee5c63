@@ -1,0 +1,13 @@
+package com.tomdignan.android.LEDCallerID;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+public final class Preferences {
+	private static final String PREFERENCES_NAME = "PREFERENCES";
+
+	public static SharedPreferences getSharedPreferences(Context context) {
+		return context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
+	}
+}
+

@@ -1,0 +1,49 @@
+package com.tomdignan.android.LEDCallerID;
+
+
+import android.app.Activity;
+import android.os.Bundle;
+
+/**
+ * Main Activity class for Who's Calling.
+ *
+ * @author Tom Dignan
+ */
+public class MainActivity extends Activity implements View.OnClickListener {
+	
+    /** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+    }
+    
+// Uncomment when we have a need for settings
+//    @Override
+//    public boolean onCreateOptionsMenu(Menu menu) {
+//    	MenuInflater inflater = new MenuInflater(this);
+//    	inflater.inflate(R.menu.hoos_calling_menu, menu);
+//    	return super.onCreateOptionsMenu(menu);
+//    }
+//
+//    @Override
+//    public boolean onOptionsItemSelected(MenuItem item) {
+//    	int id = item.getItemId();
+//    	
+//    	switch(id) {
+//    	
+//    	case R.id.menu_settings:
+//    		launchSettingsActivity();
+//    		break;
+//    		
+//    	default:
+//        	return super.onOptionsItemSelected(item);
+//    	}
+//    	
+//    	return true;
+//    }	
+//    
+//    private void launchSettingsActivity() {
+//    	
+//    }
+}

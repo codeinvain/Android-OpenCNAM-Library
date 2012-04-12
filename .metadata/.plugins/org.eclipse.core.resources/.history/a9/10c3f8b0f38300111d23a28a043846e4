@@ -1,0 +1,62 @@
+package com.tomdignan.android.opencnam.library;
+
+import java.io.InputStream;
+import java.security.KeyStore;
+
+import org.apache.http.client.HttpClient;
+import org.apache.http.conn.scheme.PlainSocketFactory;
+import org.apache.http.conn.scheme.Scheme;
+import org.apache.http.conn.scheme.SchemeRegistry;
+import org.apache.http.conn.scheme.SocketFactory;
+import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.impl.conn.tsccm.ThreadSafeClientConnManager;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpParams;
+
+import android.content.Context;
+
+/**
+ * Code taken from
+ * 
+ * http://stackoverflow.com/questions/2642777/trusting-all-certificates-using-httpclient-over-https/6378872#6378872
+ *  
+ * NOTE: Contrary to the title above, this solution does NOT trust ALL certificates. It only trusts the certificate
+ * that is in res/raw/certstore.bks. * 
+ */
+public class SSLCertificateHelper {
+
+	private static final String KEYSTORE_PASSWORD = "abc123";
+	
+	public static HttpClient makeSSLFriendlyHttpClient(Context context) {
+		final SchemeRegistry schemeRegistry = new SchemeRegistry();
+		schemeRegistry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
+		schemeRegistry.register(new Scheme("https", createAdditionalCertsSSLSocketFactory(context), 443));
+
+		// and then however you create your connection manager, I use ThreadSafeClientConnManager
+		final HttpParams params = new BasicHttpParams();
+		final ThreadSafeClientConnManager connectionManager = new ThreadSafeClientConnManager(params, schemeRegistry);
+		HttpClient client = new DefaultHttpClient(connectionManager, params);
+		return client;
+	}
+	
+	protected static SSLSocketFactory createAdditionalCertsSSLSocketFactory(Context context) {
+	    try {
+	        final KeyStore ks = KeyStore.getInstance("BKS");
+
+	        // the bks file we generated above
+	        final InputStream in = context.getResources().openRawResource( R.raw.mystore);  
+	        try {
+	            // don't forget to put the password used above in strings.xml/mystore_password
+	            ks.load(in, context.getString( KEYSTORE_PASSWORD ).toCharArray());
+	        } finally {
+	            in.close();
+	        }
+
+	        return new AdditionalKeyStoresSSLSocketFactory(ks);
+
+	    } catch( Exception e ) {
+	        throw new RuntimeException(e);
+	    }
+	}
+}

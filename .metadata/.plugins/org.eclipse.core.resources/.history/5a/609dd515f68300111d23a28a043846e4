@@ -1,0 +1,5 @@
+package com.tomdignan.android.opencnam.library.teststub;
+
+public class StubApplication {
+
+}

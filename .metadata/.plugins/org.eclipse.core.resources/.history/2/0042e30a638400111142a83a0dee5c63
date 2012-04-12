@@ -1,0 +1,43 @@
+package com.tomdignan.android.LEDCallerID;
+
+import java.util.HashMap;
+
+import android.content.Context;
+import android.content.SharedPreferences;
+
+/**
+ * Helper for setting/getting preferences. Manages default
+ * preferences in one place.
+ */
+public final class Preferences {
+	private static final String PREFERENCES_NAME = "PREFERENCES";
+
+	/**
+	 * Whether caller id is currently active, i.e. will show up when
+	 * the device receives a call.
+	 * 
+	 * Value: Boolean
+	 */
+	public static final String IS_CALLER_ID_ACTIVE = "IS_CALLER_ID_ACTIVE";
+	
+	/** Initialize defaults for all preferences here */
+	private static HashMap<String,Object> DEFAULTS = 
+			new HashMap<String,Object>() {{
+		
+		put(IS_CALLER_ID_ACTIVE, true);
+		
+	}};
+	
+	public static SharedPreferences getSharedPreferences(Context context) {
+		return context.getSharedPreferences(PREFERENCES_NAME, Context.MODE_PRIVATE);
+	}
+	
+	public static boolean getBoolean(SharedPreferences preferences, String name) {
+		return preferences.getBoolean(name, (Boolean) DEFAULTS.get(name));
+	}
+	
+	public static boolean getBoolean(Context context, String name) {
+		SharedPreferences = getSharedPreferences(context);
+	}
+}
+

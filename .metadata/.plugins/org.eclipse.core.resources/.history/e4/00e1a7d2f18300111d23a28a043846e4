@@ -1,0 +1,15 @@
+package com.tomdignan.android.opencnam.library;
+
+public class SSLCertificateHelper {
+
+	public static void registerSSLSocketFactory() {
+		final SchemeRegistry schemeRegistry = new SchemeRegistry();
+		schemeRegistry.register(new Scheme("http", PlainSocketFactory.getSocketFactory(), 80));
+		schemeRegistry.register(new Scheme("https", createAdditionalCertsSSLSocketFactory(), 443));
+
+		// and then however you create your connection manager, I use ThreadSafeClientConnManager
+		final HttpParams params = new BasicHttpParams();
+		...
+		final ThreadSafeClientConnManager cm = new ThreadSafeClientConnManager(params,schemeRegistry);
+	}
+}

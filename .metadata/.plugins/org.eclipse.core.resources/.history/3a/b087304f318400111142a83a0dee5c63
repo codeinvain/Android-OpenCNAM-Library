@@ -1,0 +1,13 @@
+package com.tomdignan.android.opencnam.library;
+
+import org.apache.http.client.HttpClient;
+
+public class BasicOpenCNAMRequest extends OpenCNAMRequest {
+
+
+	@Override
+	protected HttpClient getHttpClient() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+}

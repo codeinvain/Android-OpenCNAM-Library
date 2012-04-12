@@ -1,0 +1,9 @@
+package com.tomdignan.android.opencnam.library;
+
+public class BasicOpenCNAMRequest extends OpenCNAMRequest {
+
+	public BasicOpenCNAMRequest() throws Exception {
+		super();
+	}
+
+}
