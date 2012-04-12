@@ -30,21 +30,22 @@ import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 
 import com.tomdignan.android.opencnam.library.OpenCNAMRequest;
+import com.tomdignan.android.opencnam.library.SSLCertifiedOpenCNAMRequest;
+import com.tomdignan.android.opencnam.library.teststub.StubApplication;
 
+import android.test.InstrumentationTestCase;
 import android.util.Log;
-import junit.framework.TestCase;
 
 /**
  * Testcase for Android OpenCNAM library project.
  * 
  * @author Tom Dignan
  */
-public class OpenCNAMRequestTestCase extends TestCase {
+public class OpenCNAMRequestTestCase extends InstrumentationTestCase {
 	private static final String TAG = "OpenCNAMRequestTestCase";
 	
 	private OpenCNAMRequest mOpenCNAMRequest;
 	
-	// Replace with your info to run the tests.
 	private static final String NUMBER = "_REDACTED_";
 	private static final String CNAM = "_REDACTED_";
 	private static final String USERNAME = "_REDACTED_";
@@ -54,7 +55,9 @@ public class OpenCNAMRequestTestCase extends TestCase {
 	
 	@Override
 	protected void setUp() throws Exception {
-		mOpenCNAMRequest = new OpenCNAMRequest();
+		mOpenCNAMRequest = new SSLCertifiedOpenCNAMRequest(StubApplication.getApplication()
+				.getApplicationContext());
+		
 		mOpenCNAMRequest.setPhoneNumber(NUMBER);
 		mOpenCNAMRequest.setUsername(USERNAME);
 		mOpenCNAMRequest.setAPIKey(APIKEY);
@@ -100,7 +103,7 @@ public class OpenCNAMRequestTestCase extends TestCase {
 		JSONObject object = null;
 		
 		try {
-			object = new JSONObject(response);
+			object = new JSONObject(response);        
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
