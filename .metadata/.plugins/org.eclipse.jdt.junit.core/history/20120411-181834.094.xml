@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testrun name="android-opencnam-library-tests (1)" project="android-opencnam-library-tests" tests="3" started="3" failures="0" errors="0" ignored="0">
-  <testsuite name="com.tomdignan.android.opencnam.library.teststub.test.OpenCNAMRequestTestCase" time="3.122">
-    <testcase name="testJSONRequest" classname="com.tomdignan.android.opencnam.library.teststub.test.OpenCNAMRequestTestCase" time="1.116"/>
-    <testcase name="testTextRequest" classname="com.tomdignan.android.opencnam.library.teststub.test.OpenCNAMRequestTestCase" time="0.827"/>
-    <testcase name="testXMLRequest" classname="com.tomdignan.android.opencnam.library.teststub.test.OpenCNAMRequestTestCase" time="1.179"/>
-  </testsuite>
-</testrun>

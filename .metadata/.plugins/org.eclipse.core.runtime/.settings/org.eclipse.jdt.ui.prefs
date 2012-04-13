@@ -1,4 +1,4 @@
-content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="android.content.Context"><rhs name\="com.tomdignan.android.opencnam.library.teststub.StubApplication"/></lhs></history>
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="android.content.Context"><rhs name\="com.tomdignan.android.opencnam.library.teststub.StubApplication"/></lhs><lhs name\="org.apache.http.conn.scheme.LayeredSocketFactory"><rhs name\="com.tomdignan.android.opencnam.library.ssl.InsecureSSLSocketFactory"/></lhs><lhs name\="org.apache.http.conn.scheme.SocketFactory"><rhs name\="com.tomdignan.android.opencnam.library.ssl.InsecureSSLSocketFactory"/></lhs><lhs name\="org.apache.http.conn.ssl.SSLSocketFactory"><rhs name\="com.tomdignan.android.opencnam.library.ssl.InsecureSSLSocketFactory"/></lhs></history>
 content_assist_number_of_computers=13
 content_assist_proposals_background=255,255,255
 content_assist_proposals_foreground=80,80,80

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="15" version="2.0">
+<workbench progressCount="22" version="2.0">
 <workbenchAdvisor/>
-<window height="764" maximized="true" width="1016" x="454" y="367">
+<window height="760" maximized="true" width="1008" x="354" y="41">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -22,9 +22,13 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="182" y="28"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.browser.editor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.PropertiesFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.vimplugin.editors.VimEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.browser.editor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -39,54 +43,124 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
+<part id="8"/>
+<part id="9"/>
+<part id="10"/>
+<part id="11"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="17"/>
+<part id="18"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenCNAMRequest.java" partName="OpenCNAMRequest.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library/src/com/tomdignan/android/opencnam/library/OpenCNAMRequest.java" title="OpenCNAMRequest.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/OpenCNAMRequest.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/OpenCNAMRequest.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1857" selectionTopPixel="275"/>
+<editorState selectionHorizontalPixel="0" selectionLength="13" selectionOffset="4375" selectionTopPixel="2640"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StubApplication.java" partName="StubApplication.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-teststub/src/com/tomdignan/android/opencnam/library/teststub/StubApplication.java" title="StubApplication.java" tooltip="android-opencnam-teststub/src/com/tomdignan/android/opencnam/library/teststub/StubApplication.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-teststub/src/com/tomdignan/android/opencnam/library/teststub/StubApplication.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="333" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CallerIdDisplayService.java" partName="CallerIdDisplayService.java" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/src/com/tomdignan/android/LEDCallerID/CallerIdDisplayService.java" title="CallerIdDisplayService.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/CallerIdDisplayService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/CallerIdDisplayService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3808" selectionTopPixel="2056"/>
 </editor>
-<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="android-opencnam-teststub Manifest" path="/home/tom/Workspaces/android-opencnam/android-opencnam-teststub/AndroidManifest.xml" title="android-opencnam-teststub Manifest" tooltip="android-opencnam-teststub/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-teststub/AndroidManifest.xml"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BasicOpenCNAMRequest.java" partName="BasicOpenCNAMRequest.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library/src/com/tomdignan/android/opencnam/library/BasicOpenCNAMRequest.java" title="BasicOpenCNAMRequest.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/BasicOpenCNAMRequest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/BasicOpenCNAMRequest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="199" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" partName="LEDCallerID Manifest" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/AndroidManifest.xml" title="LEDCallerID Manifest" tooltip="LEDCallerID/AndroidManifest.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/AndroidManifest.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="BaseIncomingCallListener.java" partName="BaseIncomingCallListener.java" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/src/com/tomdignan/android/LEDCallerID/BaseIncomingCallListener.java" title="BaseIncomingCallListener.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/BaseIncomingCallListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/BaseIncomingCallListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="423" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MainActivity.java" partName="MainActivity.java" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/src/com/tomdignan/android/LEDCallerID/MainActivity.java" title="MainActivity.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/MainActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/MainActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2033" selectionTopPixel="972"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="HUDHelper.java" partName="HUDHelper.java" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/src/com/tomdignan/android/LEDCallerID/HUDHelper.java" title="HUDHelper.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/HUDHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/HUDHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="44" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/res/values/strings.xml" title="strings.xml" tooltip="LEDCallerID/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/res/values/strings.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Preferences.java" partName="Preferences.java" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/src/com/tomdignan/android/LEDCallerID/Preferences.java" title="Preferences.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/Preferences.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/Preferences.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="53" selectionOffset="833" selectionTopPixel="259"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IncomingCallListener.java" partName="IncomingCallListener.java" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/src/com/tomdignan/android/LEDCallerID/IncomingCallListener.java" title="IncomingCallListener.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/IncomingCallListener.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/IncomingCallListener.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="10" selectionOffset="397" selectionTopPixel="343"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/res/values/strings.xml" title="strings.xml" tooltip="LEDCallerID/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/res/values/strings.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" partName="main.xml" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/res/layout/main.xml" title="main.xml" tooltip="LEDCallerID/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/res/layout/main.xml"/>
+</editor>
+<editor id="org.vimplugin.editors.VimEditor" name="instructions.html" partName="instructions.html" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/assets/html/instructions.html" title="instructions.html" tooltip="LEDCallerID/assets/html/instructions.html" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/assets/html/instructions.html"/>
+<editorState/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenCNAMRequestTestCase.java" partName="OpenCNAMRequestTestCase.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library-tests/src/com/tomdignan/android/opencnam/library/teststub/test/OpenCNAMRequestTestCase.java" title="OpenCNAMRequestTestCase.java" tooltip="android-opencnam-library-tests/src/com/tomdignan/android/opencnam/library/teststub/test/OpenCNAMRequestTestCase.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library-tests/src/com/tomdignan/android/opencnam/library/teststub/test/OpenCNAMRequestTestCase.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2239" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1889" selectionTopPixel="107"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.ClassFileEditor" name="SSLHelper.class" partName="SSLHelper.class" title="SSLHelper.class" tooltip="com.tomdignan.android.opencnam.library.SSLHelper" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-teststub/\/home\/tom\/Workspaces\/android-opencnam\/android-opencnam-library\/bin\/android-opencnam-library.jar&lt;com.tomdignan.android.opencnam.library(SSLHelper.class"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2062" selectionTopPixel="720"/>
+<editor id="org.eclipse.jdt.ui.PropertiesFileEditor" name="project.properties" partName="project.properties" path="/home/tom/Workspaces/android-opencnam-app/WhosCalling/project.properties" title="project.properties" tooltip="LEDCallerID/project.properties" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/LEDCallerID/project.properties"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="668" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSLCertifiedOpenCNAMRequest.java" partName="SSLCertifiedOpenCNAMRequest.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertifiedOpenCNAMRequest.java" title="SSLCertifiedOpenCNAMRequest.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertifiedOpenCNAMRequest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertifiedOpenCNAMRequest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="25" selectionOffset="809" selectionTopPixel="135"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSLHelper.java" partName="SSLHelper.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLHelper.java" title="SSLHelper.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLHelper.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLHelper.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1581" selectionTopPixel="1099"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdditionalKeyStoresSSLSocketFactory.java" partName="AdditionalKeyStoresSSLSocketFactory.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/AdditionalKeyStoresSSLSocketFactory.java" title="AdditionalKeyStoresSSLSocketFactory.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/AdditionalKeyStoresSSLSocketFactory.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/AdditionalKeyStoresSSLSocketFactory.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1085" selectionTopPixel="153"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSLDebugHttpClient.java" partName="SSLDebugHttpClient.java" path="/home/tom/Workspaces/android-opencnam/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLDebugHttpClient.java" title="SSLDebugHttpClient.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLDebugHttpClient.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLDebugHttpClient.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1660" selectionTopPixel="580"/>
 </editor>
 </editors>
 <views>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
-<viewState/>
-</view>
 <view id="org.eclipse.jdt.junit.ResultView" partName="JUnit">
 <viewState failuresOnly="false" layout="1" orientation="2" ratio="500" scroll="false" time="true"/>
+</view>
+<view id="org.eclim.eclipse.headed.EclimdView" partName="eclimd">
+<viewState/>
+</view>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.jdt.ui.JavaSearchResultPage" org.eclipse.jdt.search.resultpage.grouping="3" org.eclipse.jdt.search.resultpage.limit="1000" org.eclipse.jdt.search.resultpage.limit_enabled="TRUE" org.eclipse.jdt.search.resultpage.sorting="1" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors (1 item)"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (2 items)"/>
 </expanded>
-<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="105" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="350"/>
+<columnWidths org.eclipse.ui.ide.locationField="105" org.eclipse.ui.ide.markerType="223" org.eclipse.ui.ide.pathField="140" org.eclipse.ui.ide.resourceField="105" org.eclipse.ui.ide.severityAndDescriptionField="916"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
 </viewState>
-</view>
-<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
-<viewState/>
 </view>
 <view id="org.eclipse.jdt.ui.PackageExplorer" partName="Package Explorer">
 <viewState group_libraries="1" layout="2" linkWithEditor="0" rootMode="1" workingSetName="Aggregate for window 1334010359278">
@@ -117,10 +191,21 @@
 </customFilters>
 </viewState>
 </view>
+<view id="org.eclipse.ui.console.ConsoleView" partName="Console">
+<viewState/>
+</view>
+<view id="com.android.ide.eclipse.ddms.views.OldLogCatView" partName="LogCat (deprecated)">
+<viewState/>
+</view>
+<view id="com.android.ide.eclipse.ddms.views.EmulatorControlView" partName="Emulator Control">
+<viewState/>
+</view>
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration"/>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="com.android.ide.eclipse.ddms.views.OldLogCatView" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="adt.actionSet.wizards"/>
@@ -183,7 +268,10 @@
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="com.android.ide.eclipse.ddms.views.LogCatView"/>
+<view id="com.android.ide.eclipse.ddms.views.EmulatorControlView"/>
+<view id="org.eclim.eclipse.headed.EclimdView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
+<view id="com.android.ide.eclipse.ddms.views.OldLogCatView"/>
 <view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.jdt.junit.ResultView"/>
 <fastViewBars/>
@@ -210,15 +298,18 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.26780087" ratioLeft="425" ratioRight="1162" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.5217391" ratioLeft="384" ratioRight="352" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<info part="org.eclipse.ui.editorss" ratio="0.15689981" ratioLeft="249" ratioRight="1338" relationship="2" relative="left"/>
+<info folder="true" part="bottom" ratio="0.047554348" ratioLeft="35" ratioRight="701" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.OldLogCatView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
-<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LogCat"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.search.ui.views.SearchView" label="LabelNotFound"/>
+<page content="org.eclim.eclipse.headed.EclimdView" label="eclimd"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="com.android.ide.eclipse.ddms.views.EmulatorControlView" label="Emulator Control"/>
+<page content="com.android.ide.eclipse.ddms.views.OldLogCatView" label="LogCat (deprecated)"/>
+<page content="com.android.ide.eclipse.ddms.views.LogCatView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProgressView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
@@ -227,6 +318,9 @@
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
+<part id="5"/>
+<part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
@@ -245,155 +339,165 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-library-tests/\/home\/tom\/Tools\/Android\/android-sdk-linux\/platforms\/android-15\/android.jar&lt;android.test(AndroidTestRunner.class"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library-tests/src/com/tomdignan/android/opencnam/library/teststub/test/OpenCNAMRequestTestCase.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/CallerIdDisplayService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLHelper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/AdditionalKeyStoresSSLSocketFactory.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLDebugHttpClient.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/InsecureSSLSocketFactory.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/OpenCNAMRequest.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/android-opencnam-library-tests/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/android-opencnam-library/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/android-opencnam-teststub/AndroidManifest.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertificateHelper.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/AdditionalKeyStoresSSLSocketFactory.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLHelper.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-teststub/src/com/tomdignan/android/opencnam/library/teststub/StubApplication.java"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-teststub/\/home\/tom\/Workspaces\/android-opencnam\/android-opencnam-library\/bin\/android-opencnam-library.jar&lt;com.tomdignan.android.opencnam.library(SSLHelper.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-library-tests/\/home\/tom\/Tools\/Android\/android-sdk-linux\/platforms\/android-15\/android.jar&lt;android.content(ContextWrapper.class"/>
-<editor factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-teststub/\/home\/tom\/Workspaces\/android-opencnam\/android-opencnam-library\/bin\/android-opencnam-library.jar&lt;com.tomdignan.android.opencnam.library(SSLHelper.class"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/HUDHelper.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/MainActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" path="/LEDCallerID/AndroidManifest.xml"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/BasicOpenCNAMRequest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertifiedOpenCNAMRequest.java"/>
 </editors>
-<item historyLabel="android-opencnam-library-tests Manifest" index="3"/>
-<item historyLabel="android-opencnam-library Manifest" index="4"/>
-<item historyLabel="android-opencnam-teststub Manifest" index="5"/>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="2994" y="0"/>
-</item>
-<item historyLabel="SSLCertificateHelper.java" index="6">
+<item historyLabel="SSLDebugHttpClient.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="SSLCertificateHelper.java" index="6">
-<position info="not_deleted" x="2259" y="0"/>
-</item>
-<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="7">
-<position info="not_deleted" x="456" y="0"/>
-</item>
-<item historyLabel="SSLCertificateHelper.java" index="6">
+<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="2">
 <position/>
 </item>
-<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="7">
-<position info="not_deleted" x="662" y="296"/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="3462" y="0"/>
 </item>
-<item historyLabel="SSLCertificateHelper.java" index="6">
-<position info="not_deleted" x="849" y="0"/>
+<item historyLabel="InsecureSSLSocketFactory.java" index="4">
+<position info="not_deleted" x="951" y="0"/>
 </item>
-<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="7">
-<position info="not_deleted" x="4877" y="2"/>
-</item>
-<item historyLabel="SSLCertificateHelper.java" index="6">
-<position info="not_deleted" x="895" y="0"/>
-</item>
-<item historyLabel="SSLCertificateHelper.java" index="6">
-<position info="not_deleted" x="561" y="0"/>
-</item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="2994" y="0"/>
-</item>
-<item historyLabel="SSLHelper.java" index="8">
-<position info="not_deleted" x="850" y="0"/>
-</item>
-<item historyLabel="SSLHelper.java" index="8">
-<position info="not_deleted" x="817" y="0"/>
-</item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="1145" y="0"/>
-</item>
-<item historyLabel="OpenCNAMRequestTestCase.java" index="1">
-<position info="not_deleted" x="1438" y="0"/>
-</item>
-<item historyLabel="StubApplication.java" index="9">
+<item historyLabel="SSLDebugHttpClient.java" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequestTestCase.java" index="1">
-<position info="not_deleted" x="1834" y="0"/>
+<item historyLabel="InsecureSSLSocketFactory.java" index="4">
+<position info="not_deleted" x="604" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="1145" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="589" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequestTestCase.java" index="1">
-<position info="not_deleted" x="1834" y="0"/>
+<item historyLabel="InsecureSSLSocketFactory.java" index="4">
+<position info="not_deleted" x="1439" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequestTestCase.java" index="1">
-<position info="not_deleted" x="1989" y="0"/>
+<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="2">
+<position info="not_deleted" x="1260" y="0"/>
 </item>
-<item historyLabel="SSLHelper.class" index="10">
-<position/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="3462" y="0"/>
 </item>
-<item historyLabel="SSLHelper.java" index="8">
-<position info="not_deleted" x="817" y="0"/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="2192" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="3744" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="589" y="0"/>
 </item>
-<item historyLabel="SSLHelper.java" index="8">
-<position info="not_deleted" x="1188" y="0"/>
+<item historyLabel="InsecureSSLSocketFactory.java" index="4">
+<position info="not_deleted" x="1353" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="589" y="0"/>
 </item>
-<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="7">
-<position info="not_deleted" x="4877" y="2"/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="2192" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="1552" y="19"/>
 </item>
-<item historyLabel="SSLHelper.java" index="8">
-<position info="not_deleted" x="1188" y="0"/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="3155" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="894" y="18"/>
 </item>
-<item historyLabel="android-opencnam-library Manifest" index="4"/>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="3" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequestTestCase.java" index="1">
-<position info="not_deleted" x="1989" y="0"/>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="6182" y="0"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="6296" y="56"/>
 </item>
-<item historyLabel="AndroidTestRunner.class" index="0">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="CallerIdDisplayService.java" index="0">
+<position info="not_deleted" x="1667" y="50"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="1391" y="19"/>
 </item>
-<item historyLabel="android-opencnam-teststub Manifest" index="5"/>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="7021" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="1943" y="0"/>
 </item>
-<item historyLabel="android-opencnam-library-tests Manifest" index="3"/>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="1857" y="0"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="1949" y="0"/>
 </item>
-<item historyLabel="ContextWrapper.class" index="11">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="CallerIdDisplayService.java" index="0">
+<position info="not_deleted" x="1667" y="50"/>
 </item>
-<item historyLabel="OpenCNAMRequest.java" index="2">
-<position info="not_deleted" x="1857" y="0"/>
+<item historyLabel="HUDHelper.java" index="6">
+<position info="not_deleted" x="44" y="0"/>
 </item>
-<item historyLabel="StubApplication.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="CallerIdDisplayService.java" index="0">
+<position info="not_deleted" x="310" y="0"/>
 </item>
-<item historyLabel="StubApplication.java" index="9">
-<position info="not_deleted" x="333" y="0"/>
+<item historyLabel="MainActivity.java" index="7">
+<position info="not_deleted" x="2033" y="0"/>
 </item>
-<item historyLabel="android-opencnam-teststub Manifest" index="5"/>
-<item historyLabel="OpenCNAMRequestTestCase.java" index="1">
-<position info="not_deleted" x="2239" y="0"/>
+<item historyLabel="LEDCallerID Manifest" index="8"/>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="1949" y="0"/>
 </item>
-<item historyLabel="SSLHelper.class" index="12">
-<position info="not_deleted" x="2595" y="49"/>
+<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="2">
+<position info="not_deleted" x="1086" y="0"/>
 </item>
-<item active="true" historyLabel="SSLHelper.class" index="12">
-<position info="not_deleted" x="2481" y="0"/>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="4659" y="35"/>
+</item>
+<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="2">
+<position info="not_deleted" x="1095" y="35"/>
+</item>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="4659" y="35"/>
+</item>
+<item historyLabel="AdditionalKeyStoresSSLSocketFactory.java" index="2">
+<position info="not_deleted" x="1085" y="0"/>
+</item>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="3145" y="18"/>
+</item>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="894" y="18"/>
+</item>
+<item historyLabel="SSLDebugHttpClient.java" index="3">
+<position info="not_deleted" x="1660" y="0"/>
+</item>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="1545" y="0"/>
+</item>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="3849" y="0"/>
+</item>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="1992" y="0"/>
+</item>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="3849" y="0"/>
+</item>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="3931" y="13"/>
+</item>
+<item historyLabel="OpenCNAMRequest.java" index="5">
+<position info="not_deleted" x="4375" y="13"/>
+</item>
+<item historyLabel="BasicOpenCNAMRequest.java" index="9">
+<position info="not_deleted" x="199" y="1"/>
+</item>
+<item historyLabel="SSLCertifiedOpenCNAMRequest.java" index="10">
+<position info="not_deleted" x="809" y="25"/>
+</item>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="1247" y="25"/>
+</item>
+<item historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="2148" y="0"/>
+</item>
+<item active="true" historyLabel="SSLHelper.java" index="1">
+<position info="not_deleted" x="2730" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -401,12 +505,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -418,38 +516,50 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="SSLHelper.class" tooltip="com.tomdignan.android.opencnam.library.SSLHelper">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-teststub/\/home\/tom\/Workspaces\/android-opencnam\/android-opencnam-library\/bin\/android-opencnam-library.jar&lt;com.tomdignan.android.opencnam.library(SSLHelper.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSLDebugHttpClient.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLDebugHttpClient.java">
+<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLDebugHttpClient.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="InsecureSSLSocketFactory.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/InsecureSSLSocketFactory.java">
+<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/InsecureSSLSocketFactory.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdditionalKeyStoresSSLSocketFactory.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/AdditionalKeyStoresSSLSocketFactory.java">
+<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/AdditionalKeyStoresSSLSocketFactory.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSLHelper.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLHelper.java">
+<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/ssl/SSLHelper.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SSLCertifiedOpenCNAMRequest.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertifiedOpenCNAMRequest.java">
+<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/SSLCertifiedOpenCNAMRequest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="GIMP Image Editor" name="ic_launcher.png" tooltip="LEDCallerID/res/drawable-ldpi/ic_launcher.png">
+<persistable path="/LEDCallerID/res/drawable-ldpi/ic_launcher.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="ic_launcher.png" tooltip="LEDCallerID/res/drawable-mdpi/ic_launcher.png">
+<persistable path="/LEDCallerID/res/drawable-mdpi/ic_launcher.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="ic_launcher.png" tooltip="LEDCallerID/res/drawable-hdpi/ic_launcher.png">
+<persistable path="/LEDCallerID/res/drawable-hdpi/ic_launcher.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.PropertiesFileEditor" name="project.properties" tooltip="LEDCallerID/project.properties">
+<persistable path="/LEDCallerID/project.properties"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenCNAMRequestTestCase.java" tooltip="android-opencnam-library-tests/src/com/tomdignan/android/opencnam/library/teststub/test/OpenCNAMRequestTestCase.java">
 <persistable path="/android-opencnam-library-tests/src/com/tomdignan/android/opencnam/library/teststub/test/OpenCNAMRequestTestCase.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="android-opencnam-teststub/AndroidManifest.xml">
-<persistable path="/android-opencnam-teststub/AndroidManifest.xml"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.vimplugin.editors.VimEditor" name="instructions.html" tooltip="LEDCallerID/assets/html/instructions.html">
+<persistable path="/LEDCallerID/assets/html/instructions.html"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="StubApplication.java" tooltip="android-opencnam-teststub/src/com/tomdignan/android/opencnam/library/teststub/StubApplication.java">
-<persistable path="/android-opencnam-teststub/src/com/tomdignan/android/opencnam/library/teststub/StubApplication.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="LEDCallerID/res/layout/main.xml">
+<persistable path="/LEDCallerID/res/layout/main.xml"/>
 </file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="ContextWrapper.class" tooltip="android.content.ContextWrapper">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-library-tests/\/home\/tom\/Tools\/Android\/android-sdk-linux\/platforms\/android-15\/android.jar&lt;android.content(ContextWrapper.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="LEDCallerID/res/values/strings.xml">
+<persistable path="/LEDCallerID/res/values/strings.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="OpenCNAMRequest.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/OpenCNAMRequest.java">
-<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/OpenCNAMRequest.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="IncomingCallListener.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/IncomingCallListener.java">
+<persistable path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/IncomingCallListener.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AdditionalKeyStoresSSLSocketFactory.java" tooltip="android-opencnam-library/src/com/tomdignan/android/opencnam/library/AdditionalKeyStoresSSLSocketFactory.java">
-<persistable path="/android-opencnam-library/src/com/tomdignan/android/opencnam/library/AdditionalKeyStoresSSLSocketFactory.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="android-opencnam-library/AndroidManifest.xml">
-<persistable path="/android-opencnam-library/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.manifest.ManifestEditor" name="AndroidManifest.xml" tooltip="android-opencnam-library-tests/AndroidManifest.xml">
-<persistable path="/android-opencnam-library-tests/AndroidManifest.xml"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="InstrumentationTestRunner.class" tooltip="android.test.InstrumentationTestRunner">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-library-tests/\/home\/tom\/Tools\/Android\/android-sdk-linux\/platforms\/android-15\/android.jar&lt;android.test(InstrumentationTestRunner.class"/>
-</file>
-<file factoryID="org.eclipse.jdt.ui.ClassFileEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" name="AndroidTestRunner.class" tooltip="android.test.AndroidTestRunner">
-<persistable org.eclipse.jdt.ui.ClassFileIdentifier="=android-opencnam-library-tests/\/home\/tom\/Tools\/Android\/android-sdk-linux\/platforms\/android-15\/android.jar&lt;android.test(AndroidTestRunner.class"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="PreferencesHelper.java" tooltip="LEDCallerID/src/com/tomdignan/android/LEDCallerID/PreferencesHelper.java">
+<persistable path="/LEDCallerID/src/com/tomdignan/android/LEDCallerID/PreferencesHelper.java"/>
 </file>
 </mruList>
 </workbench>

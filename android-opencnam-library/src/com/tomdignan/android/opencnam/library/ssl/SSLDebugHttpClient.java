@@ -1,6 +1,8 @@
 package com.tomdignan.android.opencnam.library.ssl;
 
 import android.content.Context;
+import android.util.Log;
+
 import org.apache.http.conn.ClientConnectionManager;
 import org.apache.http.conn.scheme.PlainSocketFactory;
 import org.apache.http.conn.scheme.Scheme;
@@ -20,6 +22,8 @@ import java.security.KeyStore;
  * @see http://blog.crazybob.org/2010/02/android-trusting-ssl-certificates.html
  */
 public class SSLDebugHttpClient extends DefaultHttpClient {
+	private static final String TAG = "SSLDebugHttpClient";
+	
 	private Context context;
 	private String mKeystorePassword;
 	
@@ -46,8 +50,15 @@ public class SSLDebugHttpClient extends DefaultHttpClient {
 			} finally {
 				in.close();
 			}
-			return new SSLSocketFactory(trusted);
+			//test
+			SSLSocketFactory factory = new SSLSocketFactory(trusted);
+			factory.setHostnameVerifier(SSLSocketFactory.ALLOW_ALL_HOSTNAME_VERIFIER);
+			return factory;
+			
 		} catch (Exception e) {
+			Log.e(TAG, "Caught Exception " + e.getClass().getName()
+					+ " message=" + e.getMessage());
+			
 			throw new AssertionError(e);
 		}
 	}

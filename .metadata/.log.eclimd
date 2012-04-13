@@ -7,3 +7,31 @@
 2012-04-12 02:13:57,569 INFO  [org.eclim.plugin.core.CorePlugin] Plugins loaded.
 2012-04-12 02:13:57,569 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loaded plugin org.eclim.core
 2012-04-12 02:13:57,571 INFO  [org.eclim.eclipse.AbstractEclimApplication] Eclim Server Started on: 127.0.0.1:9091
+2012-04-12 15:37:08,363 INFO  [org.eclim.eclipse.AbstractEclimApplication] Shutting down eclim...
+2012-04-12 15:37:08,365 INFO  [org.eclim.eclipse.AbstractEclimApplication] Stopping plugin org.eclim.core
+2012-04-12 15:37:08,535 INFO  [org.eclim.plugin.core.CorePlugin] Stopping plugin org.eclim.jdt
+2012-04-12 15:37:08,537 INFO  [org.eclim.eclipse.AbstractEclimApplication] Clean osgi config...
+2012-04-12 15:37:09,444 INFO  [org.eclim.eclipse.AbstractEclimApplication] Eclim stopped.
+2012-04-12 21:58:31,695 INFO  [org.eclim.eclipse.AbstractEclimApplication] Workspace: /home/tom/Workspaces/android-opencnam
+2012-04-12 21:58:31,698 INFO  [org.eclim.eclipse.AbstractEclimApplication] Starting eclim...
+2012-04-12 21:58:31,720 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loading plugin org.eclim
+2012-04-12 21:58:31,758 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loading plugin org.eclim.core
+2012-04-12 21:58:31,896 INFO  [org.eclim.plugin.core.CorePlugin] Loading eclim plugins...
+2012-04-12 21:58:31,915 INFO  [org.eclim.plugin.core.CorePlugin] Loading plugin org.eclim.jdt
+2012-04-12 21:58:31,918 INFO  [org.eclim.plugin.core.CorePlugin] Plugins loaded.
+2012-04-12 21:58:31,918 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loaded plugin org.eclim.core
+2012-04-12 21:58:31,919 INFO  [org.eclim.eclipse.AbstractEclimApplication] Eclim Server Started on: 127.0.0.1:9091
+2012-04-13 00:48:26,475 INFO  [org.eclim.eclipse.AbstractEclimApplication] Shutting down eclim...
+2012-04-13 00:48:26,500 INFO  [org.eclim.eclipse.AbstractEclimApplication] Stopping plugin org.eclim.core
+2012-04-13 00:48:26,529 INFO  [org.eclim.plugin.core.CorePlugin] Stopping plugin org.eclim.jdt
+2012-04-13 00:48:26,543 INFO  [org.eclim.eclipse.AbstractEclimApplication] Clean osgi config...
+2012-04-13 00:48:26,700 INFO  [org.eclim.eclipse.AbstractEclimApplication] Eclim stopped.
+2012-04-13 01:01:04,966 INFO  [org.eclim.eclipse.AbstractEclimApplication] Workspace: /home/tom/Workspaces/android-opencnam
+2012-04-13 01:01:04,969 INFO  [org.eclim.eclipse.AbstractEclimApplication] Starting eclim...
+2012-04-13 01:01:04,989 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loading plugin org.eclim
+2012-04-13 01:01:05,020 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loading plugin org.eclim.core
+2012-04-13 01:01:05,175 INFO  [org.eclim.plugin.core.CorePlugin] Loading eclim plugins...
+2012-04-13 01:01:05,178 INFO  [org.eclim.plugin.core.CorePlugin] Loading plugin org.eclim.jdt
+2012-04-13 01:01:05,180 INFO  [org.eclim.plugin.core.CorePlugin] Plugins loaded.
+2012-04-13 01:01:05,180 INFO  [org.eclim.eclipse.AbstractEclimApplication] Loaded plugin org.eclim.core
+2012-04-13 01:01:05,181 INFO  [org.eclim.eclipse.AbstractEclimApplication] Eclim Server Started on: 127.0.0.1:9091
