@@ -1,7 +1,0 @@
-INDEX VERSION 1.126+/home/tom/Workspaces/android-opencnam/.metadata/.plugins/org.eclipse.jdt.core
-3705604177.index
-838731530.index
-3964022846.index
-2490338009.index
-4235322666.index
-2384047437.index

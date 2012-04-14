@@ -1,5 +1,0 @@
-package com.tomdignan.android.opencnam.library.ssl;
-
-public class SSLDebugHttpClient {
-
-}

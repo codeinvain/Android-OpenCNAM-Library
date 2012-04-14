@@ -1,7 +1,0 @@
-package com.tomdignan.android.opencnam.library.teststub;
-
-import android.app.Application;
-
-public class StubApplication extends Application {
-
-}

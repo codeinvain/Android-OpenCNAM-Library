@@ -1,5 +1,0 @@
-package com.tomdignan.android.opencnam.library;
-
-public class BasicOpenCNAMRequest extends OpenCNAMRequest {
-
-}
