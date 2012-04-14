@@ -46,8 +46,8 @@ public class OpenCNAMRequestTestCase extends InstrumentationTestCase {
 	
 	private OpenCNAMRequest mOpenCNAMRequest;
 	
-	private static final String NUMBER = "_REDACTED_";
-	private static final String CNAM = "_REDACTED_";
+	private static final String NUMBER = "3392033301";
+	private static final String CNAM = "MASSACHUSETTS";
 	private static final String USERNAME = "_REDACTED_";
 	private static final String APIKEY = "_REDACTED_";
 	
@@ -59,9 +59,9 @@ public class OpenCNAMRequestTestCase extends InstrumentationTestCase {
 				.getApplicationContext());
 		
 		mOpenCNAMRequest.setPhoneNumber(NUMBER);
-		mOpenCNAMRequest.setUsername(USERNAME);
-		mOpenCNAMRequest.setAPIKey(APIKEY);
-		
+//		mOpenCNAMRequest.setUsername(USERNAME);
+//		mOpenCNAMRequest.setAPIKey(APIKEY);
+//		
 		// Needed for the XML test
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		mDocumentBuilder = factory.newDocumentBuilder();
@@ -83,6 +83,47 @@ public class OpenCNAMRequestTestCase extends InstrumentationTestCase {
 		
 		assertNotNull(response);
 		assertEquals(CNAM, response.trim());
+	}
+	
+	public void testNumberWithLeadingCountryCode() {
+		String response = null;
+		mOpenCNAMRequest.setPhoneNumber("1" + NUMBER);
+		try {
+			response = (String) mOpenCNAMRequest.execute();
+		} catch (ClientProtocolException e) {
+			Log.e(TAG, "ClientProtocolException: " + e.getMessage());
+		} catch (IOException e) {
+			Log.e(TAG, "ClientProtocolException: " + e.getMessage());
+		}
+		
+		assertNotNull(response);
+		assertEquals(CNAM, response.trim());
+	}
+	
+	public void testNumberWithLeadingCountryCodeAndNonNumericChars() {
+		String response = null;
+		mOpenCNAMRequest.setPhoneNumber("--1--*((*&(*&(&&*&basdjasjcjasca" + NUMBER);
+		try {
+			response = (String) mOpenCNAMRequest.execute();
+		} catch (ClientProtocolException e) {
+			Log.e(TAG, "ClientProtocolException: " + e.getMessage());
+		} catch (IOException e) {
+			Log.e(TAG, "ClientProtocolException: " + e.getMessage());
+		}
+		
+		assertNotNull(response);
+		assertEquals(CNAM, response.trim());
+	}
+	
+	// must throw IllegalArgumentException
+	public void testNumberLessThan10Digits() {
+		Exception caught = null;
+		try {
+			mOpenCNAMRequest.setPhoneNumber("411");
+		} catch (IllegalArgumentException e) {
+			caught = e;
+		}
+		assertNotNull(caught);
 	}
 	
 	public void testJSONRequest() {

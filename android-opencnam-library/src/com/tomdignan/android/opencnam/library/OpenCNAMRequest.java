@@ -157,10 +157,25 @@ abstract public class OpenCNAMRequest implements Request {
 	/**
 	 * Set the phone number to be looked up when execute() is called.
 	 * 
+	 * Phone numbers will be restricted to the rightmost 10 digits, because
+	 * that is what opencnam requires. If you attempt to set a phone number
+	 * that is less than 10 digits, an exception will be thrown.
+	 * 
+	 * @thanks to @rdegges for input sanitization fix.
+	 * 
 	 * @param phoneNumber
 	 */
-	public void setPhoneNumber(String phoneNumber) {
-		mPhoneNumber = phoneNumber;
+	public void setPhoneNumber(String phoneNumber) throws IllegalArgumentException {
+		phoneNumber = phoneNumber.replaceAll("[^\\d]", "");
+		int length = phoneNumber.length();
+		if (length < 10) {
+			throw new IllegalArgumentException("Phone numbers must be at least 10 digits");
+		} else if (length > 10) {
+			phoneNumber = phoneNumber.substring(length - 10, length);
+			mPhoneNumber = phoneNumber;
+		} else {
+			mPhoneNumber = phoneNumber;
+		}
 	}
 	
 	/**
